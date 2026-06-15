@@ -1,0 +1,24 @@
+{
+  "name": "mapa-del-mundial",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "mkdir -p public/data && cp ../data/bbdd_mundial_nacimiento_localizado.csv public/data/",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4",
+    "papaparse": "^5.4.1",
+    "svelte-spa-router": "^4.0.1"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "gh-pages": "^6.3.0",
+    "svelte": "^4.2.18",
+    "vite": "^5.4.0"
+  }
+}
