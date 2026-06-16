@@ -562,14 +562,14 @@ Iran,15,Roozbeh Cheshmi,https://www.transfermarkt.com/roozbeh-cheshmi/profil/spi
 Iran,16,Mehdi Torabi,https://www.transfermarkt.com/mehdi-torabi/profil/spieler/283833,Left Winger,1994-09-10,Tractor FC,1200000.0,"Karaj, Alborz",Iran,35.8224892,50.9904681
 Iran,17,Arya Yousefi,https://www.transfermarkt.com/arya-yousefi/profil/spieler/932724,Right-Back,2002-04-22,Sepahan FC,1500000.0,"Mahshahr, Khuzestan",Iran,30.5577268,49.1997454
 Iran,18,Amirhossein Hosseinzadeh,https://www.transfermarkt.com/amirhossein-hosseinzadeh/profil/spieler/542380,Centre-Forward,2000-10-30,Tractor FC,2200000.0,Tehran,Iran,35.6892523,51.3896004
+Iran,19,Ali Nemati,https://www.transfermarkt.com/ali-nemati/profil/spieler/527092,Centre-Back,1996-02-07,Foolad FC,550000.0,"Nishabur, Razavi Khorasan",Iran,,
 Iran,20,Shahriar Moghanlou,https://www.transfermarkt.com/shahriar-moghanlou/profil/spieler/357125,Centre-Forward,1994-12-21,Kalba FC,800000.0,"Shahr-e Rey, Tehran",Iran,35.5989911,51.4357865
+Iran,21,Mohammad Ghorbani,https://www.transfermarkt.com/mohammad-ghorbani/profil/spieler/856087,Defensive Midfield,2001-05-21,Al-Wahda FC,1200000.0,"Arak, Markazi",Iran,34.0862719,49.6893884
 Iran,22,Seyed Hossein Hosseini,https://www.transfermarkt.com/seyed-hossein-hosseini/profil/spieler/132561,Goalkeeper,1992-06-30,Sepahan FC,500000.0,"Shiraz, Fars",Iran,29.6060218,52.5378041
 Iran,23,Ramin Rezaeian,https://www.transfermarkt.com/ramin-rezaeian/profil/spieler/188312,Right-Back,1990-03-21,Foolad FC,250000.0,"Sari, Mazandaran",Iran,36.5537458,53.0602761
 Iran,24,Dennis Eckert Ayensa,https://www.transfermarkt.com/dennis-eckert-ayensa/profil/spieler/249303,Centre-Forward,1997-01-09,Standard Liège,2000000.0,Bonn,Germany,50.7352621,7.1024635
 Iran,25,Danial Eiri,https://www.transfermarkt.com/danial-eiri/profil/spieler/1080301,Centre-Back,2003-10-26,Malavan Bandar Anzali,1000000.0,"Gonbad-e Kavus, Golestan",Iran,37.2492965,55.1659018
 Iran,26,Amirmohammad Razzaghinia,https://www.transfermarkt.com/amirmohammad-razzaghinia/profil/spieler/1051591,Central Midfield,2006-04-11,Esteghlal FC,1200000.0,Yazd,Iran,32.0406164,54.6657189
-Iran,19,Ali Nemati,https://www.transfermarkt.com/ali-nemati/profil/spieler/527092,Centre-Back,1996-02-07,Foolad FC,550000.0,"Nishabur, Razavi Khorasan",Iran,,
-Iran,21,Mohammad Ghorbani,https://www.transfermarkt.com/mohammad-ghorbani/profil/spieler/856087,Defensive Midfield,2001-05-21,Al-Wahda FC,1200000.0,"Arak, Markazi",Iran,34.0862719,49.6893884
 Iraq,1,Fahad Talib,https://www.transfermarkt.com/fahad-talib/profil/spieler/377268,Goalkeeper,1994-10-21,Al-Talaba SC,375000.0,"---, Baghdad",Iraq,33.3061701,44.3872213
 Iraq,2,Rebin Sulaka,https://www.transfermarkt.com/rebin-sulaka/profil/spieler/217073,Centre-Back,1992-04-12,Port FC,100000.0,"Ankawa, Erbil",Iraq,36.2325997,43.9972173
 Iraq,3,Hussein Ali,https://www.transfermarkt.com/hussein-ali/profil/spieler/585325,Right-Back,2002-03-01,Pogon Szczecin,400000.0,Malmö,Sweden,55.6052931,13.0001566
@@ -672,7 +672,7 @@ Jordan,22,Abdallah Al-Fakhouri,https://www.transfermarkt.com/abdallah-al-fakhour
 Jordan,23,Ehsan Haddad,https://www.transfermarkt.com/ehsan-haddad/profil/spieler/310943,Right-Back,1994-02-05,Al-Hussein SC (Irbid),300000.0,Irbid,Jordan,32.4010093,35.5607928
 Jordan,24,Ali Azaizeh,https://www.transfermarkt.com/ali-azaizeh/profil/spieler/1059056,Right Winger,2004-04-13,Al-Shabab FC,325000.0,-,Germany,51.1638175,10.4478313
 Jordan,26,Anas Badawi,https://www.transfermarkt.com/anas-badawi/profil/spieler/1378902,Right-Back,1997-09-13,Al-Faisaly SC,200000.0,,,,
-Jordan,11,Odeh Fakhoury,https://www.transfermarkt.com/odeh-fakhoury/profil/spieler/1252820,Left Winger,2005-11-20,Pyramids FC,350000.0,,,,
+Jordan,11,Odeh Fakhoury,https://www.transfermarkt.com/odeh-fakhoury/profil/spieler/1252820,Left Winger,2005-11-20,Pyramids FC,,,,,
 Mexico,1,Raúl Rangel,https://www.transfermarkt.com/raul-rangel/profil/spieler/802855,Goalkeeper,2000-02-25,Deportivo Guadalajara,6500000.0,Zapotlán el Grande,Mexico,19.6973465,-103.510648
 Mexico,2,Jorge Sánchez,https://www.transfermarkt.com/jorge-sanchez/profil/spieler/356044,Right-Back,1997-12-10,PAOK Thessaloniki,2000000.0,Torreón,Mexico,25.542698,-103.410512
 Mexico,3,César Montes,https://www.transfermarkt.com/cesar-montes/profil/spieler/387687,Centre-Back,1997-02-24,Lokomotiv Moscow,7500000.0,Hermosillo,Mexico,29.0948207,-110.9692202
@@ -776,6 +776,7 @@ New Zealand,23,Ryan Thomas,https://www.transfermarkt.com/ryan-thomas/profil/spie
 New Zealand,24,Callan Elliot,https://www.transfermarkt.com/callan-elliot/profil/spieler/482204,Right-Back,1999-07-07,Auckland FC,450000.0,Dumfries,Scotland,55.0691831,-3.6106856
 New Zealand,25,Lachlan Bayliss,https://www.transfermarkt.com/lachlan-bayliss/profil/spieler/1109358,Central Midfield,2002-07-24,Newcastle United Jets,550000.0,Darwin,Australia,-12.46044,130.8410469
 New Zealand,26,Tommy Smith,https://www.transfermarkt.com/tommy-smith/profil/spieler/54381,Centre-Back,1990-03-31,Braintree Town,50000.0,Macclesfield,England,53.2606635,-2.1255158
+New Zealand,7,Logan Rogerson,https://www.transfermarkt.com/logan-rogerson/profil/spieler/312317,Right Winger,1998-05-28,Auckland FC,400000.0,Hamilton,New Zealand,-37.7878809,175.281788
 Norway,1,Ørjan Nyland,https://www.transfermarkt.com/orjan-nyland/profil/spieler/73517,Goalkeeper,1990-09-10,Sevilla FC,800000.0,Volda,Norway,62.0803798,6.2744108
 Norway,2,Morten Thorsby,https://www.transfermarkt.com/morten-thorsby/profil/spieler/226524,Central Midfield,1996-05-05,US Cremonese,2800000.0,Oslo,Norway,59.9133301,10.7389701
 Norway,3,Kristoffer Ajer,https://www.transfermarkt.com/kristoffer-ajer/profil/spieler/328658,Centre-Back,1998-04-17,Brentford FC,18000000.0,Rælingen,Norway,59.8910114,11.0789878
@@ -841,19 +842,19 @@ Paraguay,10,Miguel Almirón,https://www.transfermarkt.com/miguel-almiron/profil/
 Paraguay,11,Mauricio,https://www.transfermarkt.com/mauricio/profil/spieler/678439,Attacking Midfield,2001-06-22,Sociedade Esportiva Palmeiras,15000000.0,São Paulo,Brazil,-23.5506507,-46.6333824
 Paraguay,12,Orlando Gill,https://www.transfermarkt.com/orlando-gill/profil/spieler/643259,Goalkeeper,2000-06-11,CA San Lorenzo de Almagro,6000000.0,San Lorenzo,Paraguay,-25.3425224,-57.509397
 Paraguay,13,José Canale,https://www.transfermarkt.com/jose-canale/profil/spieler/402627,Centre-Back,1996-07-20,CA Lanús,2200000.0,Itauguá,Paraguay,-25.3947318,-57.3532892
+Paraguay,14,Andrés Cubas,https://www.transfermarkt.com/andres-cubas/profil/spieler/323872,Defensive Midfield,1996-05-22,Vancouver Whitecaps FC,4500000.0,Aristóbulo del Valle,Argentina,-27.099185,-54.8935248
 Paraguay,15,Gustavo Gómez,https://www.transfermarkt.com/gustavo-gomez/profil/spieler/215390,Centre-Back,1993-05-06,Sociedade Esportiva Palmeiras,3500000.0,San Juan Bautista,Paraguay,-26.6690194,-57.1455794
 Paraguay,16,Damián Bobadilla,https://www.transfermarkt.com/damian-bobadilla/profil/spieler/861852,Central Midfield,2001-07-11,São Paulo Futebol Clube,6000000.0,Asunción,Paraguay,-25.2800459,-57.6343814
 Paraguay,17,Kaku,https://www.transfermarkt.com/kaku/profil/spieler/355817,Attacking Midfield,1995-01-11,Al-Ain FC,4500000.0,Ciudadela,Argentina,-34.6399288,-58.5410771
 Paraguay,18,Álex Arce,https://www.transfermarkt.com/alex-arce/profil/spieler/970518,Centre-Forward,1995-06-16,CS Independiente Rivadavia,3500000.0,Carapeguá,Paraguay,-25.767636,-57.2425331
 Paraguay,19,Julio Enciso,https://www.transfermarkt.com/julio-enciso/profil/spieler/660867,Attacking Midfield,2004-01-23,RC Strasbourg Alsace,25000000.0,Caaguazú,Paraguay,-25.333333,-55.833333
 Paraguay,20,Braian Ojeda,https://www.transfermarkt.com/braian-ojeda/profil/spieler/491596,Defensive Midfield,2000-06-27,Orlando City SC,3500000.0,San Lorenzo,Paraguay,-25.3425224,-57.509397
+Paraguay,21,Gabriel Ávalos,https://www.transfermarkt.com/gabriel-avalos/profil/spieler/358418,Centre-Forward,1990-10-12,CA Independiente,750000.0,Hohenau,Paraguay,-27.0712879,-55.639978
 Paraguay,22,Gastón Olveira,https://www.transfermarkt.com/gaston-olveira/profil/spieler/301722,Goalkeeper,1993-04-21,Olimpia Asunción,500000.0,Montevideo,Uruguay,-34.9058916,-56.1913095
 Paraguay,23,Matías Galarza,https://www.transfermarkt.com/matias-galarza/profil/spieler/661269,Central Midfield,2002-02-11,Atlanta United FC,3000000.0,Asunción,Paraguay,-25.2800459,-57.6343814
 Paraguay,24,Gustavo Caballero,https://www.transfermarkt.com/gustavo-caballero/profil/spieler/891672,Left Winger,2001-09-21,Portsmouth FC,1000000.0,San Lorenzo,Paraguay,-25.3425224,-57.509397
 Paraguay,25,Isidro Pitta,https://www.transfermarkt.com/isidro-pitta/profil/spieler/675178,Centre-Forward,1999-08-14,Red Bull Bragantino,7500000.0,Tobatí,Paraguay,-25.2602337,-57.0824109
 Paraguay,26,Alexandro Maidana,https://www.transfermarkt.com/alexandro-maidana/profil/spieler/1371519,Left-Back,2005-07-26,CA Talleres,2500000.0,Caacupé,Paraguay,-25.3856888,-57.140477
-Paraguay,14,Andrés Cubas,https://www.transfermarkt.com/andres-cubas/profil/spieler/323872,Defensive Midfield,1996-05-22,Vancouver Whitecaps FC,4500000.0,Aristóbulo del Valle,Argentina,-27.099185,-54.8935248
-Paraguay,21,Gabriel Ávalos,https://www.transfermarkt.com/gabriel-avalos/profil/spieler/358418,Centre-Forward,1990-10-12,CA Independiente,750000.0,Hohenau,Paraguay,-27.0712879,-55.639978
 Portugal,1,Diogo Costa,https://www.transfermarkt.com/diogo-costa/profil/spieler/357153,Goalkeeper,1999-09-19,FC Porto,40000000.0,Rothrist,Switzerland,47.3029125,7.8826232
 Portugal,2,Nélson Semedo,https://www.transfermarkt.com/nelson-semedo/profil/spieler/231572,Right-Back,1993-11-16,Fenerbahce,6000000.0,Lisboa,Portugal,38.7077507,-9.1365919
 Portugal,3,Rúben Dias,https://www.transfermarkt.com/ruben-dias/profil/spieler/258004,Centre-Back,1997-05-14,Manchester City,55000000.0,Amadora,Portugal,38.758959,-9.2365233
@@ -978,8 +979,8 @@ Senegal,21,Habib Diarra,https://www.transfermarkt.com/habib-diarra/profil/spiele
 Senegal,22,Bara Sapoko Ndiaye,https://www.transfermarkt.com/bara-sapoko-ndiaye/profil/spieler/1497653,Central Midfield,2007-12-31,Bayern Munich,4000000.0,Mékhé,Senegal,15.1138084,-16.6326816
 Senegal,23,Mory Diaw,https://www.transfermarkt.com/mory-diaw/profil/spieler/164904,Goalkeeper,1993-06-22,Le Havre AC,900000.0,Poissy,France,48.9274192,2.0426301
 Senegal,24,Antoine Mendy,https://www.transfermarkt.com/antoine-mendy/profil/spieler/891998,Centre-Back,2004-05-27,OGC Nice,10000000.0,Marseille,France,43.2963986,5.3777888
-Senegal,26,Pape Gueye,https://www.transfermarkt.com/pape-gueye/profil/spieler/485963,Central Midfield,1999-01-24,Villarreal CF,40000000.0,Montreuil,France,50.4638918,1.7631125
 Senegal,25,El Hadji Malick Diouf,https://www.transfermarkt.com/el-hadji-malick-diouf/profil/spieler/1111589,Left-Back,2004-12-28,West Ham United,28000000.0,Ziguinchor,Senegal,12.5634929,-16.2724609
+Senegal,26,Pape Gueye,https://www.transfermarkt.com/pape-gueye/profil/spieler/485963,Central Midfield,1999-01-24,Villarreal CF,40000000.0,Montreuil,France,50.4638918,1.7631125
 South Africa,1,Ronwen Williams,https://www.transfermarkt.com/ronwen-williams/profil/spieler/175577,Goalkeeper,1992-01-21,Mamelodi Sundowns FC,800000.0,"Port Elizabeth, Eastern Cape",South Africa,-33.9618598,25.6186731
 South Africa,2,Thabang Matuludi,https://www.transfermarkt.com/thabang-matuludi/profil/spieler/1109254,Right-Back,1999-01-14,Polokwane City FC,1200000.0,"Dennilton, Limpopo",South Africa,-25.2655556,29.1688889
 South Africa,3,Khulumani Ndamane,https://www.transfermarkt.com/khulumani-ndamane/profil/spieler/1283140,Centre-Back,2004-02-05,Mamelodi Sundowns FC,1200000.0,"Sahlumbe, KwaZulu-Natal",South Africa,,
