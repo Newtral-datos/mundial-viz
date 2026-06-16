@@ -21,8 +21,7 @@
   let players      = []
   let loading      = true
   let error        = null
-  let search       = ''
-  let posFilter    = null
+  let search = ''
 
   // Dos niveles de acordeón: grupos y equipos dentro del grupo
   let openGroups = new Set()
@@ -53,7 +52,6 @@
       p.player_tm?.toLowerCase().includes(search.toLowerCase()) ||
       p.club?.toLowerCase().includes(search.toLowerCase())
     )) return false
-    if (posFilter && POS_MAP[p.pos] !== posFilter) return false
     return true
   })
 
@@ -67,6 +65,15 @@
     })),
   }))
 
+  // Cuando hay búsqueda, mostrar todos los grupos/equipos con resultados ignorando el estado manual
+  $: visibleGroups = search
+    ? new Set(groupData.filter(g => g.teams.some(tm => tm.players.length > 0)).map(g => g.letter))
+    : openGroups
+
+  $: visibleTeams = search
+    ? new Set(groupData.flatMap(g => g.teams.filter(tm => tm.players.length > 0).map(tm => tm.name)))
+    : openTeams
+
 
 </script>
 
@@ -74,19 +81,7 @@
 
   <!-- Barra de filtros -->
   <div class="bar filter-bar">
-    <div class="filter-group">
-      <span class="filter-label">Posición</span>
-      {#each ['GK','DF','MF','FW'] as pos}
-        <button
-          class="chip"
-          class:active={posFilter === pos}
-          on:click={() => posFilter = posFilter === pos ? null : pos}
-        >{POS_ES[pos]}</button>
-      {/each}
-    </div>
-
-    <div class="divider"></div>
-
+    <span class="hint-text">Pincha en los grupos y en las selecciones para ver a sus jugadores</span>
     <input
       class="search"
       type="search"
@@ -103,77 +98,77 @@
   {:else}
     <div class="groups-list">
       {#each groupData as { letter, teams }}
-        <div class="group-block">
+        {#if !search || teams.some(tm => tm.players.length > 0)}
+          <div class="group-block">
 
-          <!-- Cabecera de grupo -->
-          <button class="group-header" on:click={() => toggleGroup(letter)}>
-            <span class="group-badge">Grupo {letter}</span>
-            <span class="group-teams-preview">
-              {teams.map(tm => t(tm.name)).join(' - ')}
-            </span>
-            <span class="chevron" class:open={openGroups.has(letter)}>▸</span>
-          </button>
+            <!-- Cabecera de grupo -->
+            <button class="group-header" on:click={() => toggleGroup(letter)}>
+              <span class="group-badge">Grupo {letter}</span>
+              <span class="group-teams-preview">
+                {teams.map(tm => t(tm.name)).join(' - ')}
+              </span>
+              <span class="chevron" class:open={visibleGroups.has(letter)}>▸</span>
+            </button>
 
-          <!-- Equipos del grupo -->
-          {#if openGroups.has(letter)}
-            <div class="teams-list">
-              {#each teams as { name, players: squad }}
-                <div class="team-block">
+            <!-- Equipos del grupo -->
+            {#if visibleGroups.has(letter)}
+              <div class="teams-list">
+                {#each teams as { name, players: squad }}
+                  {#if !search || squad.length > 0}
+                    <div class="team-block">
 
-                  <button class="team-header" on:click={() => toggleTeam(name)}>
-                    <span class="chevron small" class:open={openTeams.has(name)}>▸</span>
-                    <span class="team-name">{t(name)}</span>
-                  </button>
+                      <button class="team-header" on:click={() => toggleTeam(name)}>
+                        <span class="chevron small" class:open={visibleTeams.has(name)}>▸</span>
+                        <span class="team-name">{t(name)}</span>
+                      </button>
 
-                  {#if openTeams.has(name)}
-                    {#if squad.length === 0}
-                      <div class="no-players">Sin resultados con los filtros actuales</div>
-                    {:else}
-                      <div class="table-wrap">
-                        <table>
-                          <thead>
-                            <tr>
-                              <th class="center">#</th>
-                              <th>Jugador</th>
-                              <th>Pos.</th>
-                              <th class="col-secondary">Nacimiento</th>
-                              <th class="col-secondary">Club</th>
-                              <th class="right col-hide">Valor</th>
-                              <th>Lugar de nacimiento</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {#each squad as p}
+                      {#if visibleTeams.has(name)}
+                        <div class="table-wrap">
+                          <table>
+                            <thead>
                               <tr>
-                                <td class="center muted">{p.jersey ?? '—'}</td>
-                                <td class="player-name">
-                                  <a href={p.tm_url} target="_blank" rel="noopener">{p.player_tm}</a>
-                                </td>
-                                <td>
-                                  <span class="pos-badge pos-{POS_MAP[p.pos] ?? 'XX'}">
-                                    {POS_ES[POS_MAP[p.pos]] ?? p.pos ?? '—'}
-                                  </span>
-                                </td>
-                                <td class="muted col-secondary">{formatDOB(p.dob)}</td>
-                                <td class="muted col-secondary">{p.club ?? '—'}</td>
-                                <td class="value right col-hide">{formatMV(p.market_value)}</td>
-                                <td class="muted">
-                                  {p.birthplace_city ? `${p.birthplace_city}, ${t(p.birthplace_country)}` : '—'}
-                                </td>
+                                <th class="center">#</th>
+                                <th>Jugador</th>
+                                <th>Pos.</th>
+                                <th class="col-secondary">Nacimiento</th>
+                                <th class="col-secondary">Club</th>
+                                <th class="right col-hide">Valor</th>
+                                <th>Lugar de nacimiento</th>
                               </tr>
-                            {/each}
-                          </tbody>
-                        </table>
-                      </div>
-                    {/if}
+                            </thead>
+                            <tbody>
+                              {#each squad as p}
+                                <tr>
+                                  <td class="center muted">{p.jersey ?? '—'}</td>
+                                  <td class="player-name">
+                                    <a href={p.tm_url} target="_blank" rel="noopener">{p.player_tm}</a>
+                                  </td>
+                                  <td>
+                                    <span class="pos-badge pos-{POS_MAP[p.pos] ?? 'XX'}">
+                                      {POS_ES[POS_MAP[p.pos]] ?? p.pos ?? '—'}
+                                    </span>
+                                  </td>
+                                  <td class="muted col-secondary">{formatDOB(p.dob)}</td>
+                                  <td class="muted col-secondary">{p.club ?? '—'}</td>
+                                  <td class="value right col-hide">{formatMV(p.market_value)}</td>
+                                  <td class="muted">
+                                    {p.birthplace_city ? `${p.birthplace_city}, ${t(p.birthplace_country)}` : '—'}
+                                  </td>
+                                </tr>
+                              {/each}
+                            </tbody>
+                          </table>
+                        </div>
+                      {/if}
+
+                    </div>
                   {/if}
+                {/each}
+              </div>
+            {/if}
 
-                </div>
-              {/each}
-            </div>
-          {/if}
-
-        </div>
+          </div>
+        {/if}
       {/each}
     </div>
   {/if}
@@ -219,6 +214,11 @@
   /* ── Filtros ── */
   .filter-bar { gap: 0.75rem; flex-wrap: wrap; }
 
+  .hint-text {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
   .filter-group {
     display: flex;
     align-items: center;
@@ -239,27 +239,6 @@
     height: 22px;
     background: var(--border);
     flex-shrink: 0;
-  }
-
-  .chip {
-    padding: 0.22rem 0.6rem;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    background: var(--surface2);
-    color: var(--text-muted);
-    font-family: inherit;
-    font-size: 0.75rem;
-    font-weight: 500;
-    cursor: pointer;
-    white-space: nowrap;
-    transition: all 0.12s;
-  }
-  .chip:hover { border-color: var(--accent-dark); color: var(--accent-dark); }
-  .chip.active {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #0a2820;
-    font-weight: 600;
   }
 
   /* ── Lista de grupos ── */

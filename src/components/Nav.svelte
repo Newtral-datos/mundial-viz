@@ -1,5 +1,6 @@
 <script>
   import { link, location } from 'svelte-spa-router'
+  const logoUrl = `${import.meta.env.BASE_URL}logo-newtral.png`
 </script>
 
 <nav>
@@ -8,6 +9,7 @@
     <a href="/" use:link class:active={$location === '/'}>Mapa</a>
     <a href="/tabla" use:link class:active={$location === '/tabla'}>Jugadores</a>
   </div>
+  <img class="logo" src={logoUrl} alt="Newtral" />
 </nav>
 
 <style>
@@ -31,7 +33,13 @@
     color: var(--accent-dark);
   }
 
-  .links { display: flex; gap: 0.25rem; }
+  .links { display: flex; gap: 0.25rem; flex: 1; }
+
+  .logo {
+    height: 24px;
+    width: auto;
+    display: block;
+  }
 
   @media (max-width: 480px) {
     nav { padding: 0 0.75rem; gap: 0.75rem; }

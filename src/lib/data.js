@@ -17,7 +17,7 @@ export const POS_ES = {
 
 export async function loadPlayers() {
   return new Promise((resolve, reject) => {
-    Papa.parse('/data/bbdd_mundial_nacimiento_localizado.csv', {
+    Papa.parse(`${import.meta.env.BASE_URL}data/bbdd_mundial_nacimiento_localizado.csv`, {
       download: true,
       header: true,
       dynamicTyping: true,
