@@ -7,7 +7,7 @@
   const TEAM_BIRTH_EQUIV = {
     'Bosnia-Herzegovina':               ['Bosnia and Herzegovina', 'Bosnia-Herzegovina'],
     'Turkiye':                          ['Turkey', 'Turkiye'],
-    'Czechia':                          ['Czech Republic', 'Czechia'],
+    'Czechia':                          ['Czech Republic', 'Czechia', 'CSSR'],
     'Democratic Republic of the Congo': ['Democratic Republic of the Congo', 'DR Congo', 'Congo DR', 'Zaire'],
     'Cape Verde':                       ['Cape Verde', 'Cabo Verde'],
     'Ivory Coast':                      ["Ivory Coast", "Côte d'Ivoire", "Cote d'Ivoire"],
@@ -72,7 +72,7 @@
   // Leyenda (incluye no clasificado y 0 extranjeros)
   const STEPS = [
     { color: '#ffffff', label: 'No clasificado' },
-    { color: '#d8d8d8', label: '0'              },
+    { color: '#FFF6A6', label: '0'              },
     { color: '#b3f0de', label: '1–2'            },
     { color: '#5de3bf', label: '3–5'            },
     { color: '#1dd4a4', label: '6–9'            },
@@ -93,7 +93,7 @@
     for (let i = COLOR_STEPS.length - 1; i >= 0; i--) {
       if (n >= COLOR_STEPS[i].min) return COLOR_STEPS[i].color
     }
-    return '#d8d8d8'
+    return '#FFF6A6'
   }
 
   // ── Banderas ──────────────────────────────────────────────────────
@@ -107,9 +107,9 @@
     'Cabo Verde': 'CV', 'Cambodia': 'KH', 'Cameroon': 'CM', 'Canada': 'CA',
     'Cape Verde': 'CV', 'Chad': 'TD', 'Chile': 'CL', 'China': 'CN',
     'China PR': 'CN', 'Colombia': 'CO', 'Comoros': 'KM', 'Congo': 'CG',
-    'Costa Rica': 'CR', 'Croatia': 'HR', 'Cuba': 'CU', 'Curaçao': 'CW',
+    'Costa Rica': 'CR', 'Croatia': 'HR', 'Cuba': 'CU', 'Curaçao': 'CW', 'Netherlands Antilles': 'CW',
     "Côte d'Ivoire": 'CI', "Cote d'Ivoire": 'CI', 'Ivory Coast': 'CI',
-    'Czech Republic': 'CZ', 'Czechia': 'CZ',
+    'Czech Republic': 'CZ', 'Czechia': 'CZ', 'CSSR': 'CZ',
     'Democratic Republic of the Congo': 'CD', 'Dem. Rep. Congo': 'CD',
     'DR Congo': 'CD', 'Congo DR': 'CD',
     'Denmark': 'DK', 'Djibouti': 'DJ', 'Dominican Republic': 'DO',
@@ -386,15 +386,6 @@
       <div class="info-head">
         <div class="info-head-left">
           <span class="info-country">{displayed.name}</span>
-          <span class="info-subtitle" class:info-no-data={!displayed.qualified && displayed.count === 0}>
-            {#if displayed.count > 0}
-              {displayed.count} jugador{displayed.count !== 1 ? 'es' : ''} nacido{displayed.count !== 1 ? 's' : ''} fuera de su selección
-            {:else if displayed.qualified}
-              Todos nacidos en su país
-            {:else}
-              No clasificado al Mundial 2026
-            {/if}
-          </span>
         </div>
         {#if locked}
           <button class="close-btn" on:click={unlock}>×</button>
@@ -404,7 +395,7 @@
       {#if displayed.qualified && displayed.allPlayers?.length > 0}
         <div class="pill-toggle">
           <button class="pill" class:pill-active={!showAll} on:click={() => showAll = false}>
-            Extranjeros · {displayed.count}
+            Nacidos fuera · {displayed.count}
           </button>
           <button class="pill" class:pill-active={showAll} on:click={() => showAll = true}>
             Todos · {displayed.allPlayers.length}
